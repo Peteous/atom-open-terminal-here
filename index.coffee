@@ -40,7 +40,7 @@ open = (filepath) ->
   else
     dirpath = filepath
   return if not dirpath
-  command = atom.config.get 'open-terminal-here.command'
+  command = atom.config.get 'open-shell-active-directory.command'
   require('child_process').exec command, cwd: dirpath, env: filterProcessEnv()
 
 switch require('os').platform()
@@ -58,10 +58,10 @@ module.exports =
       default: defaultCommand
   activate: ->
     atom.commands.add '.tree-view .selected, atom-text-editor, atom-workspace',
-      'open-terminal-here:open': (event) ->
+      'open-shell-active-directory:open': (event) ->
         event.stopImmediatePropagation()
         open @getPath?() || @getModel?().getPath?() || getActiveFilePath()
     atom.commands.add 'atom-workspace',
-      'open-terminal-here:open-root': (event) ->
+      'open-shell-active-directory:open-root': (event) ->
         event.stopImmediatePropagation()
         open()
