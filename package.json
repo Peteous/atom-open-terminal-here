@@ -1,6 +1,6 @@
 {
   "name": "open-shell-active-directory",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Open the Terminal (OSX, Linux) or PowerShell (Windows) in the given directory via context menu or keyboard shortcut.",
   "activationCommands": {
     ".tree-view .selected, atom-text-editor, atom-workspace": [
