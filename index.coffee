@@ -47,7 +47,7 @@ switch require('os').platform()
   when 'darwin'
     defaultCommand = 'open -a Terminal.app "$PWD"'
   when 'win32'
-    defaultCommand = 'start /D "%cd%" powershell'
+    defaultCommand = 'start /D "%cd%" bash'
   else
     defaultCommand = 'x-terminal-emulator'
 
