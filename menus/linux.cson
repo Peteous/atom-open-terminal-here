@@ -1,7 +1,7 @@
 'context-menu':
   '.platform-linux .tree-view, .platform-linux atom-text-editor': [
     {
-      label: 'Open Terminal Here',
-      command: 'open-terminal-here:open'
+      label: 'Open Shell Here',
+      command: 'open-shell-active-directory:open'
     }
   ]
